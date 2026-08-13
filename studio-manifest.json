@@ -1,0 +1,23 @@
+{
+  "studio": "Problem Films",
+  "foundation_version": 1,
+  "default_fps": 30,
+  "working_resolution": [1920, 1080],
+  "master_resolution": [3840, 2160],
+  "color_profile": "Problem Lunar v1",
+  "films": {
+    "01": "THE MAZE THAT LEARNS YOU",
+    "02": "THE ECHO THAT MOVED FIRST",
+    "03": "THE MACHINE THAT DREW EVERY FUTURE"
+  },
+  "modules": [
+    "core",
+    "character",
+    "eye",
+    "physics",
+    "materials",
+    "films/03-machine",
+    "qc"
+  ],
+  "film03_current_gate": "12-second physics-performance-cinematic proof"
+}

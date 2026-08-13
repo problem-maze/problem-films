@@ -1,0 +1,25 @@
+{
+  "review_1080p": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration_seconds": 12,
+    "expected_frames": 360,
+    "native": true
+  },
+  "master_4k": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 30,
+    "duration_seconds": 12,
+    "expected_frames": 360,
+    "native_required": true
+  },
+  "color_management": {
+    "working_intent": "high-dynamic-range scene lighting with controlled highlight rolloff",
+    "display_target": "Rec.709 review",
+    "background": "#040608",
+    "lunar_white": "#E1EBF8",
+    "functional_cyan": "#73CBE8"
+  }
+}
