@@ -1,0 +1,23 @@
+name: Film 03 source QC
+
+on:
+  pull_request:
+    paths:
+      - 'films/03-machine/**'
+      - 'qc/validate_machine_source.py'
+      - '.github/workflows/film03-source-qc.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'films/03-machine/**'
+      - 'qc/validate_machine_source.py'
+
+jobs:
+  source-qc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python qc/validate_machine_source.py
