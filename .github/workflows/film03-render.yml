@@ -33,11 +33,13 @@ jobs:
       - name: Build Blender scene
         env:
           PROBLEM_RENDER_ENGINE: BLENDER_EEVEE_NEXT
+          PYTHONPATH: ${{ github.workspace }}/films/03-machine/blender
         run: |
           mkdir -p build/frames build/qc build/output
           blender --background --factory-startup \
             --python films/03-machine/blender/run_build.py \
             -- --output build/machine-12s.blend
+          test -f build/machine-12s.blend
 
       - name: Scene QC
         run: |
@@ -80,8 +82,7 @@ jobs:
           python3 - <<'PY'
           import json
           from pathlib import Path
-          p=Path('build/qc/ffprobe.json')
-          d=json.loads(p.read_text())
+          d=json.loads(Path('build/qc/ffprobe.json').read_text())
           v=next(s for s in d['streams'] if s['codec_type']=='video')
           errors=[]
           if int(v['width']) != 1920 or int(v['height']) != 1080: errors.append('resolution')
