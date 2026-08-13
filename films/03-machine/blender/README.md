@@ -14,11 +14,13 @@ This directory builds the approved 12-second Machine proof as a real 3D scene so
 
 ## Build
 
-Run on a machine with Blender available:
+Use the compatibility bootstrap on a machine with Blender available:
 
 ```bash
-blender --background --python films/03-machine/blender/build_scene.py -- --output build/machine-12s.blend
+blender --background --python films/03-machine/blender/run_build.py -- --output build/machine-12s.blend
 ```
+
+`run_build.py` normalizes Collision settings and render-engine discovery across Blender API variants, then invokes the authored scene in `build_scene.py`.
 
 Then run scene QC:
 
