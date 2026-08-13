@@ -1,0 +1,14 @@
+{
+  "duration_seconds": 12.0,
+  "fps": 30,
+  "frame_start": 1,
+  "frame_end": 360,
+  "review_resolution": [1920, 1080],
+  "master_resolution": [3840, 2160],
+  "release_frame": 300,
+  "colors": {"background":"#040608","lunar_white":"#E1EBF8","functional_cyan":"#73CBE8"},
+  "beats": {"split":[1,60],"hesitation":[60,120],"tension":[120,180],"alive_hold":[180,225],"lateral_step":[225,270],"tile_one":[270,300],"release":[300,330],"blank_future":[330,360]},
+  "required_bones": ["root","pelvis","spine","chest","neck","head","clavicle.L","upper_arm.L","forearm.L","hand.L","clavicle.R","upper_arm.R","forearm.R","hand.R","thigh.L","shin.L","foot.L","thigh.R","shin.R","foot.R"],
+  "ribbon_width_min": 0.05,
+  "planted_foot_tolerance": 0.01
+}

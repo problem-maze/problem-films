@@ -1,0 +1,108 @@
+name: Film 03 Blender render
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'films/03-machine/blender/**'
+      - 'qc/**'
+      - '.github/workflows/film03-render.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-physics-proof:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Blender and FFmpeg
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y blender ffmpeg
+          blender --version
+          ffmpeg -version | head -n 1
+
+      - name: Source QC
+        run: python3 qc/validate_machine_source.py
+
+      - name: Build Blender scene
+        env:
+          PROBLEM_RENDER_ENGINE: BLENDER_EEVEE_NEXT
+          PYTHONPATH: ${{ github.workspace }}/films/03-machine/blender
+        run: |
+          mkdir -p build/frames build/qc build/output
+          blender --background --factory-startup \
+            --python films/03-machine/blender/run_build.py \
+            -- --output build/machine-12s.blend
+          test -f build/machine-12s.blend
+
+      - name: Scene QC
+        run: |
+          blender --background --factory-startup build/machine-12s.blend \
+            --python films/03-machine/blender/qc_scene.py \
+            -- --report build/qc/machine-12s-scene-qc.json
+          cat build/qc/machine-12s-scene-qc.json
+
+      - name: Render 360 native 1080p frames
+        run: |
+          blender --background --factory-startup build/machine-12s.blend \
+            --render-output "$GITHUB_WORKSPACE/build/frames/frame_#####" \
+            --render-format PNG \
+            --render-anim
+          test "$(find build/frames -maxdepth 1 -name 'frame_*.png' | wc -l)" -eq 360
+
+      - name: Encode review MP4
+        run: |
+          ffmpeg -y -framerate 30 -i build/frames/frame_%05d.png \
+            -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p \
+            -movflags +faststart build/output/Problem-Machine-12s-Physics-Preview-1080p.mp4
+
+      - name: Encode high-bitrate master
+        run: |
+          ffmpeg -y -framerate 30 -i build/frames/frame_%05d.png \
+            -c:v prores_ks -profile:v 3 -pix_fmt yuv422p10le \
+            build/output/Problem-Machine-12s-Physics-Master-ProRes.mov
+
+      - name: Contact sheet
+        run: |
+          ffmpeg -y -i build/output/Problem-Machine-12s-Physics-Preview-1080p.mp4 \
+            -vf "fps=1,scale=480:-1,tile=4x3" -frames:v 1 \
+            build/output/Problem-Machine-12s-Contact-Sheet.jpg
+
+      - name: Technical QC
+        run: |
+          ffprobe -v error -count_frames -show_streams -show_format -of json \
+            build/output/Problem-Machine-12s-Physics-Preview-1080p.mp4 \
+            > build/qc/ffprobe.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('build/qc/ffprobe.json').read_text())
+          v=next(s for s in d['streams'] if s['codec_type']=='video')
+          errors=[]
+          if int(v['width']) != 1920 or int(v['height']) != 1080: errors.append('resolution')
+          if v.get('r_frame_rate') != '30/1': errors.append('fps')
+          if int(v.get('nb_read_frames','0')) != 360: errors.append('frame_count')
+          dur=float(d['format']['duration'])
+          if abs(dur-12.0) > 0.01: errors.append(f'duration={dur}')
+          if errors: raise SystemExit('render QC failed: '+', '.join(errors))
+          print('render QC passed', {'duration':dur,'frames':v.get('nb_read_frames'),'size':(v['width'],v['height']),'fps':v.get('r_frame_rate')})
+          PY
+
+      - name: Upload render artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: film03-machine-12s-render
+          retention-days: 14
+          compression-level: 0
+          path: |
+            build/output/Problem-Machine-12s-Physics-Preview-1080p.mp4
+            build/output/Problem-Machine-12s-Physics-Master-ProRes.mov
+            build/output/Problem-Machine-12s-Contact-Sheet.jpg
+            build/qc/machine-12s-scene-qc.json
+            build/qc/ffprobe.json
