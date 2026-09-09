@@ -1,0 +1,25 @@
+{
+  "phase": "G0A",
+  "status": "ACTIVE",
+  "branch": "ocean/v7-aaa-mobile-foundation",
+  "strategy": "dual-baseline",
+  "baselines": {
+    "visualReality": {
+      "id": "V3",
+      "file": "Problem-OCEAN-WHALE-V3.html",
+      "sha256": "129639b286d263edf2c4c9151fcac07d010d08fa36491dcc4495cef6d1c62825",
+      "bytes": 1142267,
+      "role": "visual-reality-reference"
+    },
+    "runtimeMobile": {
+      "id": "V6",
+      "file": "Problem-OCEAN-SHARK-V6-CINEMATIC-REALISM.html",
+      "sha256": "520fed835611502889cf372c67dc701bf3cd88d106c3665db1f666c9d039e0e3",
+      "bytes": 1155760,
+      "role": "runtime-mobile-engineering-reference"
+    }
+  },
+  "nextPhaseAfterPass": "G0B-V7-HYBRID-RUNTIME-FOUNDATION",
+  "visualChangesAllowed": false,
+  "optimizationAllowed": false
+}
