@@ -3,9 +3,21 @@
 Status: ACTIVE
 Branch: `ocean/v7-aaa-mobile-foundation`
 Repository: `problem-maze/problem-films`
-Baseline artifact: `Problem-OCEAN-SHARK-V6-CINEMATIC-REALISM.html`
-Baseline SHA-256: `520fed835611502889cf372c67dc701bf3cd88d106c3665db1f666c9d039e0e3`
-Baseline size: 1,155,760 bytes
+Dual baseline strategy:
+
+**Visual Reality Baseline — V3**
+- Artifact: `Problem-OCEAN-WHALE-V3.html`
+- SHA-256: `129639b286d263edf2c4c9151fcac07d010d08fa36491dcc4495cef6d1c62825`
+- Size: 1,142,267 bytes
+- Role: scene composition, ocean depth, scale cues, environmental density, visual integration reference.
+
+**Runtime / Mobile Engineering Baseline — V6**
+- Artifact: `Problem-OCEAN-SHARK-V6-CINEMATIC-REALISM.html`
+- SHA-256: `520fed835611502889cf372c67dc701bf3cd88d106c3665db1f666c9d039e0e3`
+- Size: 1,155,760 bytes
+- Role: mobile-safe WebGL behavior, measured render-cost logic, resource cleanup, quality fallback architecture, lifecycle recovery.
+
+**V7 rule:** V7 is a hybrid foundation. It must preserve V3's stronger visual reality cues while importing only the proven runtime/mobile engineering improvements from V6. Neither baseline is to be overwritten.
 Target: a highly realistic real-time shark/ocean experience that remains usable on phones, with no generated still images used as a shortcut.
 
 ## 0. Non-negotiable rules
@@ -68,26 +80,59 @@ Final delivery may return to a single self-contained HTML after the system is st
 
 ---
 
-# PHASE G0 — Baseline lock and measurable truth
+# PHASE G0A — Dual baseline lock and comparable phone truth
+
+## Purpose
+Do not decide the V7 architecture from appearance or code complexity alone. Measure V3 and V6 under the same conditions so the hybrid keeps what is visually valuable without guessing about mobile cost.
 
 ## Work
-- Import V6 unchanged as the reference build.
-- Record exact SHA-256, byte size, rendering paths, shader programs, draw calls, triangle estimates, particle counts, and lifecycle hooks.
-- Add measurement-only instrumentation without changing the visual result.
-- Record actual render time separately from the intentional 30 fps presentation cadence.
-- Record WebGL renderer/version if exposed, viewport, DPR, internal render scale, quality tier, context loss, and recovery.
+- Preserve V3 and V6 as immutable source artifacts with the exact hashes above.
+- Run both builds on the same phone, browser, orientation, viewport and test duration.
+- Add or use measurement-only instrumentation. Do not change anatomy, materials, water, camera, scene composition or animation behavior.
+- Record actual render cost separately from presentation cadence.
+- Record WebGL version/renderer when exposed, viewport, DPR, internal render resolution/scale, selected quality path, context loss/recovery, frame time distribution, long frames and test duration.
+- Record scene-cost inventory for each baseline: major geometry counts, duplicated hero-animal draws, particles, post-processing, and known heavy shader paths.
+- Evidence must identify which 3D path actually ran. A screenshot alone is not sufficient.
 
-## Acceptance gate
-G0 is complete only when:
-- the imported V6 hash matches the source artifact;
-- one desktop run and one real-phone run produce stored measurement reports;
-- we know which path actually runs on the phone;
-- no visual change has been introduced.
+## G0A acceptance gate
+G0A is complete only when:
+- both source hashes are verified;
+- V3 and V6 have comparable real-phone measurement reports from the same test setup;
+- the active WebGL/quality path is known for each run;
+- no visual or behavioral optimization has been mixed into measurement;
+- the report states which V3 visual systems are candidates to keep and which V6 runtime systems are candidates to transplant.
 
 ## Output
-- `qc/G0-baseline-report.md`
-- immutable V6 baseline build
-- phone JSON measurement evidence
+- `qc/G0A-DUAL-BASELINE-PROTOCOL.md`
+- `qc/G0A-v3-phone.json`
+- `qc/G0A-v6-phone.json`
+- `qc/G0A-comparison-report.md`
+
+---
+
+# PHASE G0B — V7 Hybrid Runtime Foundation
+
+## Purpose
+Create the first V7 architecture only after G0A numbers exist.
+
+## Work
+- Use V3 as the visual-reality reference for ocean depth, scale cues, environmental density, composition and camera feel.
+- Transplant proven V6 runtime engineering selectively: mobile-safe WebGL initialization, real render-cost measurement, dynamic quality logic, explicit GPU resource cleanup, lifecycle/context recovery, and low-cost 3D fallback behavior.
+- Keep the hero scene 3D at every viable tier. No Canvas/cartoon substitute.
+- Do not begin the final shark anatomy rebuild yet.
+- Preserve the visual result as closely as possible while changing runtime architecture.
+
+## G0B acceptance gate
+- V7 hybrid runs on the target phone.
+- V3 visual identity is not materially degraded by the runtime transplant.
+- No new visual feature has been added to hide a regression.
+- Performance changes are backed by G0A-vs-G0B evidence.
+- The build is ready to enter the 12-second realism proof.
+
+## Output
+- immutable `V7-HYBRID-FOUNDATION` review build
+- `qc/G0B-hybrid-runtime-report.md`
+- decision record of every V3 system kept and every V6 system transplanted
 
 ---
 
@@ -312,4 +357,4 @@ Never proceed merely because a version number was produced.
 
 # Immediate next action
 
-Start G0. Import V6 unchanged, preserve its SHA-256, create measurement-only instrumentation, and obtain the first real-phone baseline before changing anatomy, materials, water, or camera.
+Start **G0A**. Lock both V3 and V6 by hash, run the exact same measurement protocol on the target phone, and produce comparable V3/V6 phone evidence. Do not optimize either baseline. After G0A passes, begin **G0B V7 Hybrid Runtime Foundation** and only then enter G1 realism work.
