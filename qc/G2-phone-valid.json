@@ -1,0 +1,46 @@
+{
+  "schema": "problem-ocean-g2-v1",
+  "build": {
+    "id": "V7-G2",
+    "file": "Problem-OCEAN-SHARK-V7-G2-ANATOMY-REBUILD.html",
+    "sha256": "570fd16788be4aa459f3f4ad6bb40d0e00fa7f342a0c277c5490ec35e6e7c75a",
+    "bytes": 1115326
+  },
+  "validity": {"valid": true, "reason": "shot-complete", "completedShot": true, "notes": []},
+  "environmentStart": {
+    "viewport": {"width":384,"height":731},
+    "deviceMemory": 4,
+    "hardwareConcurrency": 8,
+    "devicePixelRatio": 2.8125,
+    "canvas": {"width":449,"height":856,"cssWidth":384,"cssHeight":731.3778076171875},
+    "internalRenderScale": 1.17,
+    "quality": "auto",
+    "qualityTier": "balanced",
+    "postProcessing": true,
+    "renderPath": "g2-full",
+    "shot": 0,
+    "webgl": {"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "environmentEnd": {
+    "viewport": {"width":384,"height":731},
+    "deviceMemory": 4,
+    "hardwareConcurrency": 8,
+    "devicePixelRatio": 2.8125,
+    "canvas": {"width":499,"height":951,"cssWidth":384,"cssHeight":731.3778076171875},
+    "internalRenderScale": 1.3,
+    "quality": "auto",
+    "qualityTier": "balanced",
+    "postProcessing": true,
+    "renderPath": "g2-full",
+    "shot": 11.962100000000031,
+    "webgl": {"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "timing": {
+    "measurementDurationMs":11969.300000011921,
+    "renderedFrames":357,
+    "renderCallWallMs":{"average":0.5252100831988145,"p50":0.5,"p95":0.7999999821186066,"p99":1.2000000011920928,"max":2.300000011920929},
+    "renderedFrameIntervalMs":{"average":33.50728291316526,"p50":33.400000000001455,"p95":33.5,"p99":33.5,"max":55.70000000000073,"over33_3":335,"over50":1}
+  },
+  "stability":{"contextLost":0,"contextRestored":0,"visibilityChanges":0,"resizeEvents":3},
+  "measurementNote":"CPU wall time around existing render(); not a raw GPU timer. G2 probe locks interaction during the 12-second anatomy proof. G2 PASS also requires close-pass visual inspection."
+}
