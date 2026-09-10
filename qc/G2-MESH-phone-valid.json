@@ -1,0 +1,9 @@
+{
+  "schema":"problem-ocean-g2mesh-v1",
+  "build":{"id":"V7-G2-MESH","file":"Problem-OCEAN-SHARK-V7-G2-MESH-AUTHORED-BASE.html","sha256":"c24bbac24dab6a8a1bb776ce42a8fcfd81d3c5fb4b96fcccbe53a56cd5ae2567","bytes":1443781},
+  "validity":{"valid":true,"reason":"shot-complete","completedShot":true,"notes":[]},
+  "environmentStart":{"viewport":{"width":384,"height":771},"deviceMemory":4,"hardwareConcurrency":5,"devicePixelRatio":2.8125,"canvas":{"width":426,"height":856,"cssWidth":384,"cssHeight":771.2000122070312},"internalRenderScale":1.1099999999999999,"quality":"auto","qualityTier":"balanced","postProcessing":true,"renderPath":"g2mesh-full","shot":0,"reducedMotion":false,"webgl":{"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","renderer":"ANGLE (Qualcomm, Adreno (TM) 610, OpenGL ES 3.2)","vendor":"Google Inc. (Qualcomm)"}},
+  "environmentEnd":{"viewport":{"width":384,"height":771},"deviceMemory":4,"hardwareConcurrency":5,"devicePixelRatio":2.8125,"canvas":{"width":499,"height":1003,"cssWidth":384,"cssHeight":771.2000122070312},"internalRenderScale":1.3,"quality":"auto","qualityTier":"balanced","postProcessing":true,"renderPath":"g2mesh-full","shot":11.973200000000034,"reducedMotion":false,"webgl":{"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","renderer":"ANGLE (Qualcomm, Adreno (TM) 610, OpenGL ES 3.2)","vendor":"Google Inc. (Qualcomm)"}},
+  "timing":{"measurementDurationMs":11982.100000023842,"renderedFrames":357,"renderCallWallMs":{"average":0.3235294123490651,"p50":0.29999998211860657,"p95":0.7200000107288349,"p99":1,"max":1.2000000178813934},"renderedFrameIntervalMs":{"average":33.53837535014005,"p50":33.40000000000873,"p95":33.5,"p99":33.5,"max":55.70000000001164,"over33_3":347,"over50":1}},
+  "stability":{"contextLost":0,"contextRestored":0,"visibilityChanges":0,"resizeEvents":4}
+}
