@@ -1,0 +1,26 @@
+{
+  "schema": "problem-ocean-g1-v1",
+  "build": {
+    "id": "V7-G1",
+    "file": "Problem-OCEAN-SHARK-V7-G1-REALITY-PROOF.html",
+    "sha256": "997b663148ff029c41aa3d1c3b978681a8ccb78eb0a1a1e922bf6d1885c5c727",
+    "bytes": 1111217
+  },
+  "validity": {"valid": false, "reason": "timeout", "completedShot": false, "notes":["12s-shot-not-complete"]},
+  "environment": {
+    "viewport":{"width":384,"height":731},
+    "deviceMemory":4,
+    "hardwareConcurrency":8,
+    "devicePixelRatio":2.8125,
+    "canvas":{"width":480,"height":914},
+    "internalRenderScale":1.25,
+    "qualityTier":"balanced",
+    "postProcessing":true,
+    "renderPath":"g1-full",
+    "shotStart":0,
+    "shotEnd":0,
+    "webgl":{"renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "timing":{"measurementDurationMs":18082.79999998212,"renderedFrames":0},
+  "stability":{"contextLost":0,"contextRestored":0,"visibilityChanges":0,"resizeEvents":0}
+}
