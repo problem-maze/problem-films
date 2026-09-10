@@ -1,0 +1,17 @@
+{
+  "phase":"G2-R1",
+  "status":"PHONE_VISUAL_EVIDENCE_PENDING",
+  "candidate":{
+    "file":"Problem-OCEAN-SHARK-V7-G2-R1-ANATOMY-CONTINUITY.html",
+    "sha256":"3d70903044f2dbce3549116e69fb2a4cc59578018077e59974befe493b5b9330",
+    "bytes":1116799
+  },
+  "probe":{
+    "file":"Problem-OCEAN-SHARK-V7-G2-R1-ANATOMY-CONTINUITY-PROBE.html",
+    "sha256":"da0353d50b2c9b722904462ae48a556e73974c666a4a915964d08cee31fee6ad",
+    "bytes":1123983
+  },
+  "triangles":{"lod0":50948,"lod1":27930,"lod2":17892},
+  "locked":{"oceanGeometry":true,"oceanShaders":true,"camera":true,"shotPose":true,"singleAnimationClock":true,"no2DFallback":true},
+  "nextGate":"target-phone-probe-and-close-pass-visual-review"
+}
