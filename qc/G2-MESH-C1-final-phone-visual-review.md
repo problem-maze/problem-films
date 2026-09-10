@@ -29,7 +29,7 @@ The lower final scale versus the earlier G2-MESH run is retained as a G3/G7 budg
 The 6–9 s close pass now provides enough species/anatomy continuity to stop large-form geometry iteration:
 - head/rostrum reads broader and less generic than the pre-C1 authored base;
 - body silhouette remains one continuous authored animal;
-- pectoral root/sweep and caudal continuity remain materially stronger than the procedural G2-R1 path;
+- pectoral root/sweep and caudal continuity remain materially stronger than the retired procedural G2-R1 path;
 - five gill slots are now readable at close range;
 - eye placement is acceptable as anatomy, although the eye still reads flat/dark;
 - overall silhouette is sufficient to proceed to material realism.
