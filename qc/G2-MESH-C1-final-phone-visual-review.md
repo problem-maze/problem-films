@@ -6,6 +6,6 @@ Corrected final probe identifies the intended C1 build `Problem-OCEAN-SHARK-V7-G
 
 Phone result: 357 frames / 11.980 s ≈ 29.80 fps, average interval 33.538 ms, p95 33.5 ms, p99 38.34 ms, zero frames above 50 ms, maximum 44.5 ms, no context loss. End state: balanced quality with post-processing ON, internal scale 1.04.
 
-Visual review of the 6–9 s close pass: the authored shark now reads as one continuous animal; the broader rostrum/head calibration is sufficient to stop large-form anatomy iteration; pectoral and caudal continuity remain materially stronger than the retired procedural path; five gill slots are readable. Remaining failures are predominantly material/shading failures: overly dark graphic gills, flat eye optics, synthetic countershading boundary, smooth CG skin and dry mouth response.
+Visual review of the 6–9 s close pass: the authored shark now reads as one continuous animal; the broader rostrum/head calibration is sufficient to stop large-form anatomy iteration; pectoral and caudal continuity remain materially stronger than the retired procedural G2-R1 path; five gill slots are readable. Remaining failures are predominantly material/shading failures: overly dark graphic gills, flat eye optics, synthetic countershading boundary, smooth CG skin and dry mouth response.
 
 **Decision: G2-MESH-C1 PASS → begin G3 Skin / Eye / Mouth Materials.**
