@@ -3,7 +3,7 @@
 Decision: **PASS**
 
 ## Integrity
-The corrected final probe now identifies the intended C1 build:
+The corrected final probe identifies the intended C1 build:
 - build id: `V7-G2-MESH-C1`
 - file: `Problem-OCEAN-SHARK-V7-G2-MESH-C1-GREAT-WHITE-CALIBRATION.html`
 - SHA-256: `efaf0ddf0489d44a3698f38dcbd195da566e3449d0da3c4decdeb51a2825893c`
@@ -26,19 +26,19 @@ The corrected final probe now identifies the intended C1 build:
 The lower final scale versus the earlier G2-MESH run is retained as a G3/G7 budget warning; it does not invalidate C1 because cadence and stability stayed clean and the full C1 path completed.
 
 ## Close-pass visual review
-The 6–9 s close pass now provides enough species/anatomy continuity to stop large-form geometry iteration:
-- head/rostrum reads broader and less generic than the pre-C1 authored base;
+The 6–9 s close pass provides enough species/anatomy continuity to stop large-form geometry iteration:
+- head/rostrum is broader and less generic than the pre-C1 authored base;
 - body silhouette remains one continuous authored animal;
 - pectoral root/sweep and caudal continuity remain materially stronger than the retired procedural G2-R1 path;
-- five gill slots are now readable at close range;
+- five gill slots are readable at close range;
 - eye placement is acceptable as anatomy, although the eye still reads flat/dark;
 - overall silhouette is sufficient to proceed to material realism.
 
-Remaining visible problems are now predominantly material/shading problems rather than blockers in large-form anatomy:
-- gill slots are too dark/graphic;
-- eye is still button-like because corneal/iris optical response is absent;
-- countershading boundary remains visibly synthetic/jagged;
-- skin reads smooth/CG;
+Remaining visible problems are now predominantly material/shading problems:
+- gill slots too dark/graphic;
+- eye button-like due to absent corneal/iris optical response;
+- synthetic/jagged countershading boundary;
+- smooth CG skin;
 - mouth lacks wet volumetric shading;
 - water/lighting and muscular locomotion remain later gates.
 
