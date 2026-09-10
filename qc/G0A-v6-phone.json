@@ -1,0 +1,56 @@
+{
+  "schema": "problem-ocean-g0a-v1",
+  "baseline": {
+    "id": "V6",
+    "file": "Problem-OCEAN-SHARK-V6-CINEMATIC-REALISM.html",
+    "sha256": "520fed835611502889cf372c67dc701bf3cd88d106c3665db1f666c9d039e0e3",
+    "bytes": 1155760
+  },
+  "validity": {"valid": true, "reason": "auto-30s", "notes": []},
+  "environmentStart": {
+    "userAgent": "Mozilla/5.0 (Linux; Android 15; SM-A057F Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.199 Mobile Safari/537.36",
+    "viewport": {"width": 384, "height": 731},
+    "devicePixelRatio": 2.8125,
+    "canvas": {"width": 461, "height": 878, "cssWidth": 384, "cssHeight": 731.3778076171875},
+    "internalRenderScale": 1.2000000000000002,
+    "quality": "auto",
+    "qualityTier": "balanced",
+    "postProcessing": true,
+    "renderPath": "webgl-safe",
+    "reducedMotion": false,
+    "webgl": {
+      "available": true,
+      "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+      "renderer": "Adreno (TM) 610",
+      "vendor": "Qualcomm"
+    }
+  },
+  "environmentEnd": {
+    "userAgent": "Mozilla/5.0 (Linux; Android 15; SM-A057F Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.199 Mobile Safari/537.36",
+    "viewport": {"width": 384, "height": 731},
+    "devicePixelRatio": 2.8125,
+    "canvas": {"width": 499, "height": 951, "cssWidth": 384, "cssHeight": 731.3778076171875},
+    "internalRenderScale": 1.3,
+    "quality": "auto",
+    "qualityTier": "balanced",
+    "postProcessing": true,
+    "renderPath": "webgl-safe",
+    "reducedMotion": false,
+    "webgl": {
+      "available": true,
+      "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+      "renderer": "Adreno (TM) 610",
+      "vendor": "Qualcomm"
+    }
+  },
+  "timing": {
+    "measurementDurationMs": 30023.899999976158,
+    "renderedFrames": 893,
+    "renderCallWallMs": {"average": 0.4314669659329956, "p50": 0.4000000059604645, "p95": 0.6400000095367409, "p99": 1, "max": 2.7000000178813934},
+    "renderedFrameIntervalMs": {"average": 33.563493840985444, "p50": 33.400000000001455, "p95": 33.5, "p99": 33.5, "max": 89.09999999999854, "over33_3": 847, "over50": 2}
+  },
+  "stability": {"contextLost": 0, "contextRestored": 0, "visibilityChanges": 0, "resizeEvents": 2},
+  "measurementNote": "renderCallWallMs is CPU wall time around the existing render() call; it is not a raw GPU timer."
+}
