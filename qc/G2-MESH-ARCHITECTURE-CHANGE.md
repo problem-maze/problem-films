@@ -50,9 +50,9 @@ Pectoral and far-tail vertices receive coarse authored-geometry part tags for th
 - Bytes: `1,443,781`
 
 Probe:
-- File: `Problem-OCEAN-SHARK-V7-G2-MESH-AUTHORED-BASE-PROBE.html`
-- SHA-256: `9212150b2d2587f074ce613c84b89736fbc7b04b10c517d1728e12cdf7e7c493`
-- Bytes: `1,450,912`
+- File: `Problem-OCEAN-SHARK-V7-G2-MESH-AUTHORED-BASE-PROBE-v2.html`
+- SHA-256: `0ac221bfeea365bd7c722867dd4412cebea561a75ba06bfc7d24deaff96e0adb`
+- Bytes: `1,451,168`
 
 Static checks:
 - JavaScript parse: PASS
