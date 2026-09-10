@@ -1,0 +1,37 @@
+{
+  "phase": "G0B",
+  "status": "PHONE_EVIDENCE_PENDING",
+  "sourceBaseline": {
+    "file": "Problem-OCEAN-WHALE-V3.html",
+    "sha256": "129639b286d263edf2c4c9151fcac07d010d08fa36491dcc4495cef6d1c62825"
+  },
+  "candidate": {
+    "file": "Problem-OCEAN-V7-HYBRID-RUNTIME-FOUNDATION.html",
+    "sha256": "0eb4506050f624393e8e585eeaa77978f5e4c2f43acdebdd391135e739ec1138",
+    "bytes": 1092668
+  },
+  "phoneProbe": {
+    "file": "Problem-OCEAN-V7-HYBRID-G0B-PROBE.html",
+    "sha256": "5414b1aaff2796cb1bb63ed000b4e871d3179950e41ed272a6e2c94d83fa74d3",
+    "bytes": 1098786,
+    "warmupSeconds": 5,
+    "measurementSeconds": 30
+  },
+  "visualCorePreserved": {
+    "geometry": true,
+    "fullShaders": true,
+    "cameraMath": true,
+    "renderSceneOrder": true
+  },
+  "runtimeChanges": [
+    "remove-width-forced-low",
+    "measured-capability-start-tier",
+    "webgl-only-safe-3d-path",
+    "dynamic-internal-scale",
+    "post-target-resource-cleanup",
+    "context-restore-full-then-safe",
+    "no-2d-fallback",
+    "single-animation-clock"
+  ],
+  "nextGate": "real-phone-G0B-probe"
+}

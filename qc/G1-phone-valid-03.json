@@ -1,0 +1,46 @@
+{
+  "schema": "problem-ocean-g1-v1",
+  "build": {
+    "id": "V7-G1",
+    "file": "Problem-OCEAN-SHARK-V7-G1-REALITY-PROOF.html",
+    "sha256": "997b663148ff029c41aa3d1c3b978681a8ccb78eb0a1a1e922bf6d1885c5c727",
+    "bytes": 1111217
+  },
+  "validity": {"valid": true, "reason": "shot-complete", "completedShot": true, "notes": []},
+  "environmentStart": {
+    "viewport":{"width":384,"height":731},
+    "deviceMemory":4,
+    "hardwareConcurrency":8,
+    "devicePixelRatio":2.8125,
+    "canvas":{"width":461,"height":878,"cssWidth":384,"cssHeight":731.3778076171875},
+    "internalRenderScale":1.2,
+    "quality":"auto",
+    "qualityTier":"balanced",
+    "postProcessing":true,
+    "renderPath":"g1-full",
+    "shot":0,
+    "webgl":{"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "environmentEnd": {
+    "viewport":{"width":384,"height":731},
+    "deviceMemory":4,
+    "hardwareConcurrency":8,
+    "devicePixelRatio":2.8125,
+    "canvas":{"width":499,"height":951,"cssWidth":384,"cssHeight":731.3778076171875},
+    "internalRenderScale":1.3,
+    "quality":"auto",
+    "qualityTier":"balanced",
+    "postProcessing":true,
+    "renderPath":"g1-full",
+    "shot":11.973100000000032,
+    "webgl":{"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "timing": {
+    "measurementDurationMs":11980.40000000596,
+    "renderedFrames":357,
+    "renderCallWallMs":{"average":0.5630252110023125,"p50":0.5,"p95":0.9200000047683704,"p99":1.5880000078678127,"max":2.100000023841858},
+    "renderedFrameIntervalMs":{"average":33.538095238095245,"p50":33.399999999999636,"p95":33.5,"p99":33.54400000000096,"max":55.69999999999891,"over33_3":334,"over50":1}
+  },
+  "stability":{"contextLost":0,"contextRestored":0,"visibilityChanges":0,"resizeEvents":2},
+  "measurementNote":"CPU wall time around existing render(); not a raw GPU timer."
+}

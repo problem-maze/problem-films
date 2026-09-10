@@ -1,0 +1,48 @@
+{
+  "schema": "problem-ocean-g0b-v1",
+  "baseline": {
+    "id": "V7-G0B",
+    "file": "Problem-OCEAN-V7-HYBRID-RUNTIME-FOUNDATION.html",
+    "sha256": "0eb4506050f624393e8e585eeaa77978f5e4c2f43acdebdd391135e739ec1138",
+    "bytes": 1092668
+  },
+  "validity": {"valid": true, "reason": "auto-30s", "notes": []},
+  "environmentStart": {
+    "userAgent": "Mozilla/5.0 (Linux; Android 15; SM-A057F Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.199 Mobile Safari/537.36",
+    "viewport": {"width":384,"height":731},
+    "deviceMemory":4,
+    "hardwareConcurrency":8,
+    "devicePixelRatio":2.8125,
+    "canvas":{"width":499,"height":951,"cssWidth":384,"cssHeight":731.3778076171875},
+    "internalRenderScale":1.3,
+    "quality":"auto",
+    "qualityTier":"balanced",
+    "postProcessing":true,
+    "renderPath":"full",
+    "reducedMotion":false,
+    "webgl":{"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","shadingLanguageVersion":"WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)","renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "environmentEnd": {
+    "userAgent": "Mozilla/5.0 (Linux; Android 15; SM-A057F Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.199 Mobile Safari/537.36",
+    "viewport": {"width":384,"height":731},
+    "deviceMemory":4,
+    "hardwareConcurrency":8,
+    "devicePixelRatio":2.8125,
+    "canvas":{"width":499,"height":951,"cssWidth":384,"cssHeight":731.3778076171875},
+    "internalRenderScale":1.3,
+    "quality":"auto",
+    "qualityTier":"balanced",
+    "postProcessing":true,
+    "renderPath":"full",
+    "reducedMotion":false,
+    "webgl":{"available":true,"version":"WebGL 1.0 (OpenGL ES 2.0 Chromium)","shadingLanguageVersion":"WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)","renderer":"Adreno (TM) 610","vendor":"Qualcomm"}
+  },
+  "timing":{
+    "measurementDurationMs":30060.90000000596,
+    "renderedFrames":893,
+    "renderCallWallMs":{"average":0.4477043670142218,"p50":0.4000000059604645,"p95":0.9000000059604645,"p99":1.3999999785423278,"max":2},
+    "renderedFrameIntervalMs":{"average":33.650615901455765,"p50":33.400000000001455,"p95":33.5,"p99":33.5,"max":133.59999999999854,"over33_3":842,"over50":2}
+  },
+  "stability":{"contextLost":0,"contextRestored":0,"visibilityChanges":0,"resizeEvents":0},
+  "measurementNote":"renderCallWallMs is CPU wall time around existing render(); frame intervals are used separately to detect cadence stalls."
+}
