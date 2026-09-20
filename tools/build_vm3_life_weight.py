@@ -9,10 +9,10 @@ def once(s, old, new, label):
 def replace_mesh_vs(s, object_marker, new_vs):
     p=s.find(object_marker)
     if p<0: raise RuntimeError("missing shader object "+object_marker)
-    a=s.find("meshVS:\`",p)
+    a=s.find("meshVS:`",p)
     if a<0: raise RuntimeError("missing meshVS "+object_marker)
-    a+=len("meshVS:\`")
-    b=s.find("\`,\n meshFS:",a)
+    a+=len("meshVS:`")
+    b=s.find("`,\n meshFS:",a)
     if b<0: raise RuntimeError("missing meshVS end "+object_marker)
     return s[:a]+new_vs+s[b:]
 
