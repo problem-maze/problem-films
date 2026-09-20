@@ -156,6 +156,7 @@ void main(){
     new="const cam=OceanMath.shot(state.shot,width/height,state.orbitX,state.orbitY,state.zoom),r=resources,sharkModel=g1Pose(state.shot),sharkBank=g1Bank(state.shot);"
     s=once(s,old,new,"frame pose cache")
     s=s.replace("g1Pose(state.shot)","sharkModel")
+    s=s.replace("sharkModel=sharkModel","sharkModel=g1Pose(state.shot)",1)
 
     # Bank must be identical across all shark passes.
     s=s.replace("uniform(r.shell,'uModel',sharkModel);gl.enable(gl.BLEND);",
