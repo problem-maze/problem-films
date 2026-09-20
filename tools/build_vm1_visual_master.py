@@ -111,7 +111,7 @@ bb=base.encode(); sha=hashlib.sha256(bb).hexdigest(); size=len(bb)
 
 probe=patch(Path(sys.argv[2]).read_text())
 probe=probe.replace('problem-ocean-g3-v1','problem-ocean-vm1-v1').replace("id:'V7-G3'","id:'V7-VM1'")
-probe=re.sub(r"file:'[^']+',sha256:'[0-9a-f]{64}',bytes:\\d+",
+probe=re.sub(r"file:'[^']+',sha256:'[0-9a-f]{64}',bytes:\d+",
              "file:'Problem-OCEAN-SHARK-V7-VM1-CREATURE-COLOR-MASTER.html',sha256:'%s',bytes:%d"%(sha,size),probe,1)
 probe="<!-- VM-1 probe: visual-first build identity locked. No generated images. -->\\n"+probe
 Path(sys.argv[4]).write_text(probe)
