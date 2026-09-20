@@ -93,8 +93,11 @@ def patch(s):
     s=s.replace("gillFade*slitSpec*.022*vec3(.46,.34,.34)","gillFade*slitSpec*.016*vec3(.38,.31,.31)",1)
 
     # VM-2: silhouette water wrap mixes the creature into surrounding medium.
-    old="color+=backscatter*vec3(.022,.040,.050);\\n color=mix(color,uFog,fog);"
-    new="color+=backscatter*vec3(.022,.040,.050);\\n float waterWrap=pow(1.-ndv,2.1)*(.040+uDeep*.030);color=mix(color,uFog,waterWrap);\\n color=mix(color,uFog,fog);"
+    old="""color+=backscatter*vec3(.022,.040,.050);
+ color=mix(color,uFog,fog);"""
+    new="""color+=backscatter*vec3(.022,.040,.050);
+ float waterWrap=pow(1.-ndv,2.1)*(.040+uDeep*.030);color=mix(color,uFog,waterWrap);
+ color=mix(color,uFog,fog);"""
     s=once(s,old,new,"water wrap")
 
     # Add an expandable shell uniform to both hero vertex paths; hero uses 0, water shell >0.
