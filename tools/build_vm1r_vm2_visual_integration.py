@@ -114,7 +114,7 @@ def patch(s):
 
     # Dedicated water-contact shell. Same animated authored geometry, expanded along normals.
     anchor="const OceanMath=(()=>{"
-    shell="""const VM12_WATER_SHELL_FS=\`precision mediump float;
+    shell="""const VM12_WATER_SHELL_FS=`precision mediump float;
 uniform vec3 uEye;uniform vec3 uFog;uniform float uDeep;uniform float uTime;uniform float uDensity;
 varying vec3 vWorld;varying vec3 vNormal;varying vec3 vLocal;varying vec2 vUV;varying float vMaterial;
 float h(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}
@@ -125,7 +125,7 @@ void main(){
  float a=(.018+.060*edge)*body*breakup*uDensity*(1.-uDeep*.18);
  vec3 c=mix(vec3(.004,.008,.011),uFog,.72);
  gl_FragColor=vec4(c,a);
-}\`;
+}`;
 
 """
     if anchor not in s: raise RuntimeError("OceanMath anchor missing")
