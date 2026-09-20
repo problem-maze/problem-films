@@ -9,7 +9,7 @@ def once(s, old, new, label):
 def patch(s):
     if '<!doctype html>' in s:
         pre,rest=s.split('<!doctype html>',1)
-        pre=pre.replace('\\\\n','\n')
+        pre=pre.replace('\\n','\n')
         s=pre+'<!doctype html>'+rest
 
     s=s.replace('VM-1R + VM-2 — Creature / Water Integration','VM-2R — Contact & Light Integration')
