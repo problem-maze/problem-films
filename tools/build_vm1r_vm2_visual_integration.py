@@ -166,7 +166,7 @@ bb=build.encode(); sha=hashlib.sha256(bb).hexdigest(); size=len(bb)
 
 probe=patch(Path(sys.argv[2]).read_text())
 probe=probe.replace("problem-ocean-vm1-v1","problem-ocean-vm12-v1")
-probe=re.sub(r"const META=\\{[^\\n;]+\\};",
+probe=re.sub(r"const META=\{[^\n;]+\};",
              "const META={id:'V7-VM1R-VM2',file:'Problem-OCEAN-SHARK-V7-VM1R-VM2-VISUAL-INTEGRATION.html',sha256:'%s',bytes:%d};"%(sha,size),probe,1)
 probe="<!-- VM-1R + VM-2 probe. Visual-first safety-floor measurement; not final performance acceptance. -->\\n"+probe
 Path(sys.argv[4]).write_text(probe)
